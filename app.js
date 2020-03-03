@@ -29,8 +29,8 @@ function promptEmployee() {
       name: "empType",
       choices: ["Engineer", "Intern", "Done"]
     })
-    .then(function(empType) {
-      if (empType === "Engineer") {
+    .then(function(response) {
+      if (response.empType === "Engineer") {
         inquirer.prompt(questions.engineer).then(engineer => {
           employees.push(
             new Engineer(
@@ -42,7 +42,7 @@ function promptEmployee() {
           );
           promptEmployee();
         });
-      } else if (empType === "Intern") {
+      } else if (response.empType === "Intern") {
         inquirer.prompt(questions.intern).then(intern => {
           employees.push(
             new Intern(intern.name, intern.id, intern.email, intern.school)
@@ -51,6 +51,8 @@ function promptEmployee() {
         });
       } else {
         const html = render(employees);
+
+        fs.writeFile(outputPath, html, () => {});
       }
     });
 }

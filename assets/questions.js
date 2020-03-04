@@ -1,4 +1,6 @@
+//Questions for inquirer
 module.exports = {
+//Questions for initial manager input.
   manager: [
     {
       type: "input",
@@ -21,6 +23,7 @@ module.exports = {
       name: "officeNumber"
     }
   ],
+//If user selects engineer, it will ask these questions
   engineer: [
     {
       type: "input",
@@ -43,6 +46,7 @@ module.exports = {
       name: "github"
     }
   ],
+//If user selects intern, it will ask these questions
   intern: [
     {
       type: "input",

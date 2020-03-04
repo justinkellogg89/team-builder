@@ -2,6 +2,8 @@
 
 ## Team Builder takes a user input through Node JS and builds an HTML page that displays the team that the user selected and inserted parameters for.
 
+![](./assets/teambuilder.gif)
+
 ## Installation
 
 npm i
